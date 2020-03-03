@@ -1,0 +1,36 @@
+### Eclipse project files ###
+/.buildpath
+/.project
+/.settings
+
+### Symfony files ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/var/
+/vendor/
+/symfony.lock
+
+### symfony/webpack-encore-bundle ###
+**/.DS_Store
+/yarn.lock
+/composer.lock
+/npm-debug.log
+/yarn-error.log
+/node_modules/
+/public/assets/
+/public/build/
+/public/bundles/
+
+### sites public dir ###
+/public/admin_panel/assets/
+/public/admin_panel/build/
+/public/admin_panel/bundles/
+
+/public/blog/assets/
+/public/blog/build/
+/public/blog/bundles/
+
+/public/default/assets/
+/public/default/build/
+/public/default/bundles/
