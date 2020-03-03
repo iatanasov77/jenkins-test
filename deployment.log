@@ -1,0 +1,91 @@
+Error: Missing or invalid 'remote' URL in config. in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/CliRunner.php:2
+
+Exception: Missing or invalid 'remote' URL in config. in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/CliRunner.php:2
+Stack trace:
+#0 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/CliRunner.php(2): Deployment\CliRunner->createDeployer(Array)
+#1 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/deployment.php(2): Deployment\CliRunner->run()
+#2 /projects_deploy/JenkinsBuildTest/deployment.phar(2): require('phar:///project...')
+#3 {main}
+Started at [2020/03/03 09:16]
+Config file is /projects_deploy/JenkinsBuildTest/deployment.ini
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+
+Local-jobs:
+local: lessc assets/combined.less assets/combined.css
+Error: Job failed, exit code 127 in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Deployer.php:2
+
+Deployment\JobException: Job failed, exit code 127 in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Deployer.php:2
+Stack trace:
+#0 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Deployer.php(2): Deployment\Deployer->runJobs(Array)
+#1 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/CliRunner.php(2): Deployment\Deployer->deploy()
+#2 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/deployment.php(2): Deployment\CliRunner->run()
+#3 /projects_deploy/JenkinsBuildTest/deployment.phar(2): require('phar:///project...')
+#4 {main}
+
+
+
+Finished at [2020/03/03 09:16] (in 0 seconds)
+----------------------------------------------
+
+
+Started at [2020/03/03 09:21]
+Config file is /projects_deploy/JenkinsBuildTest/deployment.ini
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Deleting disabled
+Connecting to server
+Remote .deployment file not found
+Scanning files in /projects_deploy/JenkinsBuildTest
+Not included ./.buildpath               
+Ignoring ./.git                         
+Ignoring ./.gitignore                   
+Not included ./.project                 
+Not included ./.settings                
+Ignoring ./deployment.ini               
+Ignoring ./deployment.log               
+Ignoring ./deployment.phar              
+
+Uploading:
+(1 of 2) /index.php
+(2 of 2) /.deployment
+Creating remote file .deployment.running
+
+Renaming:
+(1 of 2) Renaming /index.php
+(2 of 2) Renaming /.deployment
+
+Cleaning temp/cache
+
+After-jobs:
+remote: unzip api.zip
+Error: SITE EXEC is an unknown extension
+
+Deleting remote file .deployment.running
+Error: SITE EXEC is an unknown extension in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/FtpServer.php:2
+
+Deployment\ServerException: SITE EXEC is an unknown extension in phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/FtpServer.php:2
+Stack trace:
+#0 [internal function]: Deployment\Safe::Deployment\{closure}(2, 'SITE EXEC is an...', 'phar:///project...', 2, Array)
+#1 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Safe.php(2): ftp_exec(Resource id #69, 'unzip api.zip')
+#2 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/FtpServer.php(2): Deployment\Safe::__callStatic('ftp_exec', Array)
+#3 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/RetryServer.php(2): Deployment\FtpServer->execute('unzip api.zip')
+#4 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/RetryServer.php(2): Deployment\RetryServer->retry('execute', Array)
+#5 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Deployer.php(2): Deployment\RetryServer->execute('unzip api.zip')
+#6 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/Deployer.php(2): Deployment\Deployer->runJobs(Array)
+#7 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/Deployment/CliRunner.php(2): Deployment\Deployer->deploy()
+#8 phar:///projects_deploy/JenkinsBuildTest/deployment.phar/deployment.php(2): Deployment\CliRunner->run()
+#9 /projects_deploy/JenkinsBuildTest/deployment.phar(2): require('phar:///project...')
+#10 {main}
+
+
+
+Finished at [2020/03/03 09:22] (in 41 seconds)
+----------------------------------------------
+
+
